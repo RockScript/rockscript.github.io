@@ -8,102 +8,107 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
 <style>
 body {
+  width: 100%;
   border: 0px;
   margin: 0px;
-  width: 100%;
   font-family: Sans Serif, Roboto;
   font-weight:300;
 }
+
 a {
   text-decoration: none;
   font-weight: bold;
 }
-.header {
+
+.row {
+  width: 100%;
+  display: table;
+}
+
+.cell {
+  display: table-cell;
+}
+
+.content {
+  width: 600px;
+}
+
+.header-row {
   background-image: url("img/background.png");
   background-position: center top;
-  width: 100%;
   height: 220px;
-  text-align: center;
 }
-.header-content {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: yellow;
-  width:560px;
-}
+
 .header-hand {
-  position:absolute;
+  position: absolute;
   margin-top:50px;
 }
-.header-rockscript {
-  color: #2EE10C;
+
+.header-title {
+  position: absolute;
+  margin-left:85px;
+  margin-top:60px;
   font-size:4em;
   font-family: Roboto Slab;
   font-weight: 700;
-  position:absolute;
-  margin-left:85px;
-  margin-top:60px;
+  color: #2EE10C;
 }
 .header-io {
-  color: #ddd;
+  color: white;
+  opacity: 0.5;
   font-weight: 100;
 }
+
 .header-subtitle {
-  color: white;
-  font-size:1.4em;
-  position:absolute;
+  position: absolute;
   margin-left:180px;
   margin-top:140px;
-}
-.description {
-  width: 100%;
-  background-color: #f7f7f7;
-  min-height: 150px;
-}
-.description-content {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top:30px;
-  text-alight: center;
-  font-size: 1.2em;
-  width: 520px;
+  font-size:1.4em;
+  color: white;
+  opacity: 0.7;
 }
 
-.subscribe {
-  width: 100%;
-  height: 120px;
+.description-row {
+  background-color: #e6e6e6;
+}
+
+.description {
+  font-size: 1.2em;
+  letter-spacing: .05em;
+  padding: 35px 0 35px 0;
+  text-align: center;
+}
+
+.newsletter-row {
+  padding: 40px 0 40px 0;
 }
 
 .subscribe-text {
   width:100%;
-  font-size: 1em;
+  font-size: 1.2em;
+  font-weight: bold;
   color: #666;
   text-align: center;
-  padding-top:25px;
 }
 
-#mc_embed_signup_scroll {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 600px;
-  text-align:center;
-}
-
-.mc-field-group {
+div.newsletter-field {
   display: inline-block;
 }
 
-.mc-field-group input {
-  margin: 10px 3px 20px 3px;
+.newsletter-input {
+  width: 110px;
+  margin: 10px 5px 0 0;
   height: 30px;
-  font-size: .8em;
+  font-size: .9em;
 }
 
-#mc-embedded-subscribe {
+.newsletter-email {
+  width: 220px;
+}
+
+.subscribe-button {
   padding:  11px;
+  margin: 0;
   font-size: .8em;
   font-weight: bold;
   border-width: 0px;
@@ -113,86 +118,97 @@ a {
   cursor:pointer;
 }
 
+.github-row {
+}
+
+
 .github {
   text-align: center;
-  width: 100%;
-  height: 100%;
-  font-size: 1.1em;
-  background-color: #e7e7e7;
 }
+
 .github a {
-  vertical-align: middle;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #bbb;
-  border-radius: 10px;
-  background-color: white;
-  padding: 15px 25px 15px 25px;
-  color: black;
-  display: inline-block;
-  margin: 30px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #bbb;
+    border-radius: 10px;
+    background-color: #e7e7e7;
+    padding: 12px 65px 12px 65px;
+    font-size: 1.1em;
+    color: black;
+    display: inline-block;
 }
+
 .github img {
   vertical-align: middle;
 }
-
-div.clear {
-  display: inline-block;
-}
-
 </style>
 </head>
 <body>
 
-<div class="header">
-    <div class="header-content">
+<div class="row header-row">
+    <div class="cell"></div>
+    <div class="content cell">
         <div class="header-hand"><img src="img/hand.png"/></div>
-        <div class="header-rockscript">RockScript<span class="header-io">.io</span></div>
+        <div class="header-title">RockScript<span class="header-io">.io</span></div>
         <div class="header-subtitle">Resilient microservice scripting</div>
     </div>
+    <div class="cell"></div>
 </div>
 
-<div class="description">
-    <div class="description-content">
-    RockScript is a scripting language that looks like JavaScript,<br/>
-    has <b>resilient execution</b> and supports <b>long running activities</b>.<br/>
-    It's ideal for orchestrating <b>microservices</b><br/>
-    in an <b>event driven architecture</b>.
+<div class="row description-row">
+    <div class="cell"></div>
+    <div class="content cell">
+        <div class="description">
+            RockScript is a scripting language that looks like JavaScript,
+            has <b>resilient execution</b> and supports <b>long running activities</b>.
+            It's ideal for orchestrating <b>microservices</b><br/>
+            in an <b>event driven architecture</b>.
+        </div>
     </div>
+    <div class="cell"></div>
 </div>
 
-<div class="subscribe">
-    <div class="subscribe-text">Subscribe to our monthly newsletter</div>
 
-    <!-- Begin MailChimp Signup Form -->
-    <div id="mc_embed_signup">
-        <form action="//rockscript.us14.list-manage.com/subscribe/post?u=95aa3248b4dd2535b145feac6&amp;id=d88044ce98" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-            <div id="mc_embed_signup_scroll">
-                <div class="mc-field-group">
-                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="your@email.address">
+<div class="row newsletter-row">
+    <div class="cell"></div>
+    <div class="content cell">
+        <div class="subscribe-text">Be informed.&nbsp;&nbsp;&nbsp;Subscribe to our monthly newsletter</div>
+        <!-- Begin MailChimp Signup Form -->
+        <div id="mc_embed_signup">
+            <form action="//rockscript.us14.list-manage.com/subscribe/post?u=95aa3248b4dd2535b145feac6&amp;id=d88044ce98" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div class="newsletter-field">
+                    <input type="text" value="" name="FNAME" class="newsletter-input" id="mce-FNAME" placeholder="First name">
                 </div>
-                <div class="mc-field-group">
-                    <input type="text" value="" name="FNAME" class="" id="mce-FNAME" placeholder="First name">
+                <div class="newsletter-field">
+                    <input type="text" value="" name="LNAME" class="newsletter-input" id="mce-LNAME" placeholder="Last name">
                 </div>
-                <div class="mc-field-group">
-                    <input type="text" value="" name="LNAME" class="" id="mce-LNAME" placeholder="Last name">
+                <div class="newsletter-field">
+                    <input type="email" value="" name="EMAIL" class="newsletter-input newsletter-email" id="mce-EMAIL" placeholder="your@email.address">
                 </div>
-                <div id="mce-responses" class="clear">
+                <div id="mce-responses" class="newsletter-field">
                     <div class="response" id="mce-error-response" style="display:none"></div>
                     <div class="response" id="mce-success-response" style="display:none"></div>
                 </div>
                 <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_95aa3248b4dd2535b145feac6_d88044ce98" tabindex="-1" value=""></div>
-                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-            </div>
-        </form>
+                <div class="newsletter-field"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="subscribe-button"></div>
+            </form>
+        </div>
+        <!-- script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script -->
+        <!--End mc_embed_signup-->
     </div>
-    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-    <!--End mc_embed_signup-->
+    <div class="cell"></div>
 
 </div>
 
-<div class="github">
-    <a href="https://github.com/rockscript/server" onclick="top.location.href='https://github.com/rockscript/server'">View on Github <img src="img/github.png"/></a>
+<div class="row github-row">
+    <div class="cell"></div>
+    <div class="content cell">
+        <div class="github">
+            <!--onclick is a hack because of the godaddy lack of ALIAS DNS and stupid forward-with-masking alternative based on frames -->
+            <a href="https://github.com/rockscript/server" onclick="top.location.href='https://github.com/rockscript/server'">View on Github <img src="img/github.png"/></a>
+        </div>
+    </div>
+    <div class="cell"></div>
 </div>
 
 </body>
