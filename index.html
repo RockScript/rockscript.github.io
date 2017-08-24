@@ -14,6 +14,7 @@ body {
   margin: 0px;
   font-family: Sans Serif, Roboto;
   font-weight:300;
+  background-color: #f6f6f6;
 }
 
 a {
@@ -42,40 +43,43 @@ a {
 
 .header-hand {
   position: absolute;
-  margin-top:50px;
+  margin-top:28px;
+}
+
+.header-hand img {
+  height:130px;
 }
 
 .header-title {
   position: absolute;
-  margin-left:85px;
+  margin-left:90px;
   margin-top:60px;
   font-size:4em;
   font-family: Roboto Slab;
   font-weight: 700;
-  color: #2EE10C;
+  color: #008040;
 }
 .header-io {
-  color: white;
-  opacity: 0.5;
   font-weight: 100;
+  color: #897E69;
 }
 
 .header-subtitle {
   position: absolute;
   margin-left:200px;
   margin-top:145px;
-  font-size:1.2em;
-  color: white;
-  opacity: 0.7;
+  font-size:1.1em;
+  font-weight:700;
+  color: #897E69;
 }
 
 .description-row {
-  background-color: #e6e6e6;
+  background-color: white;
 }
 
 .description {
   font-size: 1.2em;
-  letter-spacing: .03em;
+  letter-spacing: .015em;
   padding: 35px 0 35px 0;
   text-align: center;
 }
@@ -114,7 +118,7 @@ div.newsletter-field {
   font-weight: bold;
   border-width: 0px;
   border-radius: 5px;
-  background-color: #2EE10C;
+  background-color: #008040;
   color: white;
   cursor:pointer;
 }
@@ -161,7 +165,7 @@ div.newsletter-field {
         <div class="description">
             RockScript is a scripting language that looks like JavaScript,<br/>
             has <b>resilient execution</b> and supports <b>long running activities</b>.<br/>
-            It's ideal for orchestrating <b>microservices</b><br/>
+            It's ideal for scripting <b>microservices</b> workflows<br/>
             in an <b>event driven architecture</b>.
         </div>
     </div>
@@ -175,7 +179,7 @@ div.newsletter-field {
         <div class="subscribe-text">Be informed.&nbsp;&nbsp;&nbsp;Subscribe to our monthly newsletter</div>
         <!-- Begin MailChimp Signup Form -->
         <div id="mc_embed_signup">
-            <form action="//rockscript.us14.list-manage.com/subscribe/post?u=95aa3248b4dd2535b145feac6&amp;id=d88044ce98" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <form activity="//rockscript.us14.list-manage.com/subscribe/post?u=95aa3248b4dd2535b145feac6&amp;id=d88044ce98" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                 <div class="newsletter-field">
                     <input type="text" value="" name="FNAME" class="newsletter-input" id="mce-FNAME" placeholder="First name">
                 </div>
