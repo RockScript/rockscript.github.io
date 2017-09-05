@@ -2,16 +2,18 @@
 <html>
 <head>
 <title>RockScript</title>
+
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700,100" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,800" rel="stylesheet">
-<style>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+    <style>
 body {
   width: 100%;
   border: 0;
   margin: 0;
-  font-family: Raleway, Sans Serif;
+  font-family: Open Sans, Sans Serif;
   font-weight:300;
-  background-color: #f6f6f6;
+  background-color: #fff;
 }
 
 a {
@@ -33,63 +35,45 @@ a {
 }
 
 .header-row {
-  background-image: url("img/background.png");
+  background-color: #f5f5f5;
   background-position: center top;
-  height: 220px;
+  height: 210px;
 }
 
-.header-hand {
+.header-logo {
   position: absolute;
   margin-top:30px;
 }
 
-.header-hand img {
+.header-logo img {
   height:140px;
-  opacity: .3;
-}
-
-.header-title {
-  position: absolute;
-  margin-left:90px;
-  margin-top:60px;
-  font-size:4em;
-  font-family: Roboto Slab;
-  font-weight: 700;
-  color: #008040;
-}
-.header-io {
-  font-weight: 100;
-  color: #897E69;
-}
-
-.header-subtitle {
-  position: absolute;
-  margin-left:100px;
-  margin-top:140px;
-  font-size:1.1em;
-  font-weight:bold;
-  letter-spacing: .025em;
-  color: #897E69;
 }
 
 .description-row {
 }
 
 .description {
-  font-size: 1.2em;
-  letter-spacing: .025em;
+  font-size: 1.1em;
   padding: 35px 0 35px 0;
   text-align: center;
+  color: #2B7191;
 }
 
 .newsletter-row {
-  background-color: white;
-  padding: 40px 0 40px 0;
+  background-color: #fafafa;
+}
+
+.newsletter-row div.content {
+  padding: 30px 0 40px 0;
+}
+
+#mc_embed_signup {
+  text-align: center;
 }
 
 .subscribe-text {
   width:100%;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: bold;
   color: #666;
   text-align: center;
@@ -117,7 +101,7 @@ div.newsletter-field {
   font-weight: bold;
   border-width: 0;
   border-radius: 5px;
-  background-color: #008040;
+  background-color: #DD5E17;
   color: white;
   cursor:pointer;
 }
@@ -127,22 +111,24 @@ div.newsletter-field {
 
 .github {
   text-align: center;
+  margin-top: 40px;
 }
 
 .github a {
+    color: #DD5E17;
     border-width: 1px;
     border-style: solid;
-    border-color: #bbb;
+    border-color: #DD5E17;
     border-radius: 10px;
-    background-color: #e7e7e7;
-    padding: 12px 65px 12px 65px;
+    background-color: #f5f5f5;
+    padding: 12px 40px 12px 40px;
     font-size: 1.1em;
-    color: black;
     display: inline-block;
 }
 
 .github img {
   vertical-align: middle;
+  margin-left: 10px;
 }
 </style>
 </head>
@@ -151,9 +137,20 @@ div.newsletter-field {
 <div class="row header-row">
     <div class="cell"></div>
     <div class="content cell">
-        <div class="header-hand"><img src="img/hand.png"/></div>
-        <div class="header-title">RockScript<span class="header-io">.io</span></div>
-        <div class="header-subtitle">Serverless microservice workflow scripting</div>
+        <div class="header-logo"><img src="img/logo.png"/></div>
+    </div>
+    <div class="cell"></div>
+</div>
+
+<div class="row description-row">
+    <div class="cell"></div>
+    <div class="content cell">
+        <div class="description">
+            RockScript is a scripting language that looks like JavaScript,<br/>
+            has <b>resilient execution</b> and supports <b>long running activities</b>.<br/>
+            It's ideal for scripting <b>microservices</b> workflows<br/>
+            in an <b>event driven architecture</b>.
+        </div>
     </div>
     <div class="cell"></div>
 </div>
@@ -189,25 +186,12 @@ div.newsletter-field {
 
 </div>
 
-<div class="row description-row">
-    <div class="cell"></div>
-    <div class="content cell">
-        <div class="description">
-            RockScript is a scripting language that looks like JavaScript,<br/>
-            has <b>resilient execution</b> and supports <b>long running activities</b>.<br/>
-            It's ideal for scripting <b>microservices</b> workflows<br/>
-            in an <b>event driven architecture</b>.
-        </div>
-    </div>
-    <div class="cell"></div>
-</div>
-
 <div class="row github-row">
     <div class="cell"></div>
     <div class="content cell">
         <div class="github">
             <!--onclick is a hack because of the godaddy lack of ALIAS DNS and stupid forward-with-masking alternative based on frames -->
-            <a href="https://github.com/rockscript/server" onclick="top.location.href='https://github.com/rockscript/server'">View on Github <img src="img/github.png"/></a>
+            <a href="https://github.com/rockscript/rockscript/wiki" onclick="top.location.href='https://github.com/rockscript/rockscript/wiki'">View on Github <img src="img/github.png"/></a>
         </div>
     </div>
     <div class="cell"></div>
