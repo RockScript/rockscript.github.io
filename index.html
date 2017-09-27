@@ -108,24 +108,26 @@
             cursor:pointer;
         }
 
-        .github {
+        .buttonlinks {
             text-align: center;
             margin-top: 40px;
         }
 
-        .github a {
+        .buttonlinks a {
             color: #DD5E17;
             border: 1px solid #DD5E17;
             border-radius: 10px;
             background-color: #f5f5f5;
-            padding: 12px 40px 12px 40px;
+            padding: 12px 30px;
             font-size: 1.1em;
             display: inline-block;
+            margin: 0 15px;
         }
 
-        .github img {
+        .buttonlinks img {
             vertical-align: middle;
             margin-left: 10px;
+            height: 32px;
         }
 
     </style>
@@ -185,14 +187,16 @@
     </tr>
 
     <tr class="github-row">
-        <td class="layout-side"></td>
-        <td class="layout-middle">
-            <div class="github">
-                <!--onclick is a hack because of the godaddy lack of ALIAS DNS and stupid forward-with-masking alternative based on frames -->
-                <a href="https://github.com/rockscript/rockscript/wiki" onclick="top.location.href='https://github.com/rockscript/rockscript/wiki'">View on Github <img src="img/github.png"/></a>
-            </div>
-        </td>
-        <td class="layout-side"></td>
+      <td class="layout-side"></td>
+      <td class="layout-middle">
+        <div class="buttonlinks">
+          <!--onclick is a hack because of the godaddy lack of ALIAS DNS and stupid forward-with-masking alternative based on frames -->
+          <a href="https://github.com/rockscript/rockscript/wiki" onclick="top.location.href='https://github.com/rockscript/rockscript/wiki'">Github documentation<img src="img/github.png"/></a>
+          <!--onclick is a hack because of the godaddy lack of ALIAS DNS and stupid forward-with-masking alternative based on frames -->
+          <a href="https://twitter.com/rockscript_io" onclick="top.location.href='https://twitter.com/rockscript_io'">Twitter <img src="img/twitter.png"/></a>
+        </div>
+      </td>
+      <td class="layout-side"></td>
     </tr>
 
 </table>
