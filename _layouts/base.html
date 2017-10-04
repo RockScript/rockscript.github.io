@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    {{ content }}
+
+    {% include footer.html %}
+
+  <script language="JavaScript">
+    function emailUs(link) {
+      link.href = 'mai'+'lto:rockscript'+'@tom'+'baeyens.'+'b'+'e';
+      return true;
+    }
+  </script>
+  {% include google-analytics.html  %}
+
+  </body>
+
+</html>

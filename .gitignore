@@ -1,7 +1,9 @@
+_site/
 target/
 bin/
 tmp/
 node_modules/
+.sass-cache/
 .idea/
 .settings/
 .plugins/
@@ -20,5 +22,3 @@ node_modules/
 *.tar
 *.zip
 *.log
-
-

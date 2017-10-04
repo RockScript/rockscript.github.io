@@ -1,0 +1,99 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+
+
+
+.tag-line {
+  background-color: #1a90bf;
+  color: white;
+  display: inline-block;
+  font-size: 42px;
+  letter-spacing: -2px;
+  font-weight: 100;
+  margin: 35px 0;
+  padding: 0 10px;
+}
+
+.description {
+  letter-spacing: -0.5px;
+  font-size: 1.125em;
+  margin: 0 0 30px 0;
+}
+
+.tagline-full-width {
+  height: 200px;
+  background-image: url(screenshot-background.png);
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.newsletter {
+  display: inline-block;
+}
+
+.newsletter-title {
+  color: #333;
+}
+
+.newsletter-field input {
+  border: 1px solid #eee;
+  padding: 4px;
+  margin: 3px 0;
+  font-size: 1em;
+  font-weight: 100;
+  background-color: #fdfdfd;
+  width: calc(100% - 10px);
+}
+
+.red-button, .red-button:visited {
+  margin: 3px 0;
+  padding: 5px;
+  font-size: .9em;
+  border: 1px solid #DD5E17;
+  background-color: #DD5E17;
+  color: white;
+  cursor:pointer;
+  line-height: 1.3em;
+}
+
+.newsletter-button input {
+  width: 100%;
+}
+
+.icon-email {
+  margin-right: 5px;
+}
+
+.description .footer-col {
+  height: 100%;
+}
+
+a.light-grey-box, a.light-grey-box:visited {
+  display: block;
+  color: darken($brand-color, 10%);
+  border: 1px solid #f5f5f5;
+  background-color: #fdfaf9;
+  height: 100%;
+  padding: 20px 25px;
+}
+
+.screenshot-border {
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #f2f2f2;
+}
+
+.screenshot {
+  width: 100%;
+}
+
+header.next {
+  margin-top: 30px;
+}
+
+.rss-subscribe {
+  float: right;
+}
