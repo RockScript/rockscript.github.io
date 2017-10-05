@@ -27,8 +27,8 @@ in contrast to authoring a workflow diagram.
 ## RockScript for all developers
 
 An activity is any interaction outside the RockScript execution engine.  Any interaction with an SaaS HTTP web API, 
-a microservice, a database, filesystem or a cloud service are all examples of activities.  Also any  
-request-response exchange pattern based on message queues fits perfect on an activity.  Activities look like 
+a microservice, a database, filesystem or a cloud service are all examples of activities.  Also any request-response 
+exchange pattern based on message queues fits perfect on an activity.  Activities look like 
 JavaScript function invocations but the engine executes them asynchronous.  Most reactive frameworks are bolted as an 
 afterthought on top of existing programming languages.  RockScript takes this a core design principle: any side effect 
 is executed asynchronous.
