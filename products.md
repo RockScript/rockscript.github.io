@@ -24,8 +24,8 @@ open source project on GitHub</a>.
 
 <h2 id="webui">RockScript Web UI</h2>
 <p>Below, you can see a preview of the commercial web UI tool we're building on top of the 
-RockScript server. The script execution viewer gives a debugger experience for ongoing 
-or past script executions.  That's possible because script executions are stored with 
+RockScript server. The scriptVersion execution viewer gives a debugger experience for ongoing 
+or past scriptVersion executions.  That's possible because scriptVersion executions are stored with 
 event sourcing.
 </p>
 <p>In the middle, you see the events which can be navigated up and down.  On the left, the 

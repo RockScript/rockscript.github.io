@@ -46,7 +46,7 @@ layout: base
         </div>
         <div class="footer-col footer-col-2">
           <a class="light-grey-box" href="/products#webui">
-            See what's possible when script executions are persisted with event sourcing
+            See what's possible when scriptVersion executions are persisted with event sourcing
           </a>
         </div>
         <div class="footer-col footer-col-3">

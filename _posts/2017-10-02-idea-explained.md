@@ -34,12 +34,12 @@ afterthought on top of existing programming languages.  RockScript takes this a 
 is executed asynchronous.
 
 Script executions are persisted with event sourcing. So while activities are waiting for a callback, no resources 
-like memory or threads are consumed for that script execution. A single activity may take seconds, days or months 
-to complete.  Once it is done, the runtime state of the script execution can be recreated from the event store.
+like memory or threads are consumed for that scriptVersion execution. A single activity may take seconds, days or months 
+to complete.  Once it is done, the runtime state of the scriptVersion execution can be recreated from the event store.
 
 ## An example
 
-Here's what a script will look like:
+Here's what a scriptVersion will look like:
    
 ```javascript
 var approvalService = system.import('example.com/approvals'); 
@@ -56,7 +56,7 @@ notificationService.notify({
 });
 ```
 
-Stored events for an execution of this script look like this
+Stored events for an execution of this scriptVersion look like this
 
 * Script with id `xyz` was started
 * Variable `approvalService` was created and initialized with value v1
@@ -80,10 +80,10 @@ Since the rise of open SaaS HTTP API's and microservices, this is more relevant 
 API's are built on HTTP and 
 don't support transactions.  RockScript is an alternative for transactions that at least ensures traceability so that 
 you know exactly which requests completed and which were started but may or may not have finished.  RockScript itself 
-will include features find script executions based on the error and resume execution after the root cause is 
+will include features find scriptVersion executions based on the error and resume execution after the root cause is 
 fixed. That kind of resilient execution is what you need when working with microservices and SaaS web API's
 
-The activity abstraction makes the resulting script code a lot easier to read. The potential is 
+The activity abstraction makes the resulting scriptVersion code a lot easier to read. The potential is 
 tremendous.  It's a simpler synchronization model in comparison to reactive approaches 
 in existing programming languages and actor systems.
 
