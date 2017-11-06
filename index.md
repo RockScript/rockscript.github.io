@@ -14,10 +14,17 @@ layout: base
   <div class="wrapper">
     <div class="home">
       <div class="description">
-        RockScript is a scripting language that looks like JavaScript,
-        has resilient execution and supports long running activities.
-        It's ideal for integrating microservices in an event driven
-        architecture.
+        <p>
+          Write blocking JavaScript and get non-blocking, resilient execution.
+        </p>
+        <p>
+          RockScript let's you code your business logic in a much more 
+          readable style compared to lower level message queues.
+        </p>
+        <p>
+          It's ideal for integrating microservices in an event driven
+          architecture and processing pipelines.
+        </p> 
       </div>
       <div class="footer-col-wrapper">
         <div class="footer-col footer-col-1">
@@ -45,8 +52,11 @@ layout: base
           <!--End mc_embed_signup-->
         </div>
         <div class="footer-col footer-col-2">
+          <a class="light-grey-box" href="https://github.com/rockscript/rockscript/wiki">
+            What, why and how
+          </a>
           <a class="light-grey-box" href="/products#webui">
-            See what's possible when script executions are persisted with event sourcing
+            See the killer feature
           </a>
         </div>
         <div class="footer-col footer-col-3">
