@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>RockScript.io Execution Inspector</title>
+  <meta name="description" content="Resilient microservice integration.">
+
+  <link rel="canonical" href="http://rockscript.io/">
+  <link rel="stylesheet" href="../main.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
+  <style>
+    .intro {
+      margin: 20px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<div class="intro">
+  <p>
+    Use the up and down arrow keys to navigate the script execution events.
+  </p>
+  <p>
+    This page is based on screenvshots, but it gives an impression of the RockScript.io script
+    execution inspector tool.  This tool gives the ability to drill down into script executions
+    that are ongoing are have already finished.  This is the kind of tool that can save a lot of
+    time debugging certain problems in production.
+  </p>
+</div>
+
+<img id="screenshot" src="ei-screenshot-1.png" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  $('body').off();
+  $('body').keydown(function(e){
+    if ($('events')) {
+      if (e.keyCode=='38') {
+        previousScreenshot();
+      } else if (e.keyCode=='40') {
+        nextScreenshot();
+      }
+    }
+  });
+
+var index = 0;
+function previousScreenshot() {
+  showScreenshot(index-1);
+}
+function nextScreenshot() {
+  showScreenshot(index+1);
+}
+function showScreenshot(i) {
+  if (0<i && i<12) {
+    $('#screenshot').attr('src', 'ei-screenshot-'+i+'.png');
+    index = i;
+  }
+}
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107122219-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107122219-1');
+</script>
+
+</body>
+
+</html>

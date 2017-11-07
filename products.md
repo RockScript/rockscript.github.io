@@ -31,11 +31,11 @@ event sourcing.
 <p>In the middle, you see the events which can be navigated up and down.  On the left, the 
 line corresponding to the selected event is highlighted. And on the right the variable values 
 are shown at the time of the selected event.
-Click on the image to open the screenshot.
+Click on the image to get an impression of how the script execution inspector works.
 </p>
 
 <figure>
-<a href="{{ site.baseurl }}/assets/screenshot.png">
+<a href="{{ site.baseurl }}/assets/execution-inspector/index.html">
   <div class="screenshot-border"><img class="screenshot" src="{{ site.baseurl }}/assets/screenshot.png" /></div>
 </a>
 </figure>
