@@ -29,7 +29,8 @@
     Use the up and down arrow keys to navigate the script execution events.
   </p>
   <p>
-    This page is based on screenshots, but it gives an impression of our
+    This page is based on screenshots (initially they may be slow to load), but it gives an
+    impression of our
     execution inspector tool.  This tool gives the ability to scroll through script executions
     that are ongoing are have already finished.  This is the kind of tool that can save a lot of
     time debugging certain problems in production.
@@ -43,18 +44,20 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
-  $('body').off();
-  $('body').keydown(function(e){
-    if ($('events')) {
-      if (e.keyCode=='38') {
-        previousScreenshot();
-      } else if (e.keyCode=='40') {
-        nextScreenshot();
-      }
-    }
-  });
+$('body').off();
+$('body').keydown(function(e){
+  if (e.keyCode=='38') {
+    previousScreenshot();
+    mode = 'manual';
+  } else if (e.keyCode=='40') {
+    nextScreenshot();
+    mode = 'manual';
+  }
+});
 
 var index = 0;
+var mode = 'auto';
+
 function previousScreenshot() {
   showScreenshot(index-1);
 }
@@ -67,6 +70,20 @@ function showScreenshot(i) {
     index = i;
   }
 }
+
+function automaticNext() {
+  if ('auto'===mode && index<11) {
+    nextScreenshot();
+    setTimeout(function() {
+      automaticNext();
+    }, 1000);
+  }
+}
+
+setTimeout(function() {
+  automaticNext();
+}, 1000);
+
 </script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107122219-1"></script>
