@@ -23,14 +23,17 @@ open source project on GitHub</a>.
 </p>
 
 <h2 id="webui">RockScript Web UI</h2>
-<p>Below, you can see a preview of the commercial web UI tool we're building on top of the 
-RockScript server. The script execution viewer gives a debugger experience for ongoing 
-or past script executions.  That's possible because script executions are stored with 
-event sourcing.
+<p>The RockScript Web UI will contain
+<ul>
+  <li>Script editor</li>
+  <li>Script execution inspector</li>
+  <li>External dependencies monitoring</li>
+</ul>
+Below, you can see a preview of the execution inspector we're building. The script execution 
+viewer gives a debugger experience for ongoing or past script executions.  That's possible 
+because script executions are stored with event sourcing.
 </p>
-<p>In the middle, you see the events which can be navigated up and down.  On the left, the 
-line corresponding to the selected event is highlighted. And on the right the variable values 
-are shown at the time of the selected event.
+<p>
 Click on the image to get an impression of how the script execution inspector works.
 </p>
 
