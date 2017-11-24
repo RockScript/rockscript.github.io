@@ -18,7 +18,7 @@ layout: base
           Write blocking JavaScript and get non-blocking, resilient execution.
         </p>
         <p>
-          RockScript let's you code your business logic in a much more 
+          RockScript lets you code your business logic in a much more 
           readable style compared to lower level message queues.
         </p>
         <p>
