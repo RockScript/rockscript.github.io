@@ -79,28 +79,29 @@
 
     function load(fileName, label, classes) {
       markdownPagesToLoad++;
-      let base = window.location.pathname;
-      if (base.endsWith("index.html")) {
-        base = base.substring(0, base.length-10);
+      let baseUrl = window.location.pathname;
+      if (baseUrl.endsWith("index.html")) {
+        baseUrl = baseUrl.substring(0, baseUrl.length-10);
       }
-      if (!base.endsWith('/')) {
-        base += '/';
+      if (!baseUrl.endsWith('/')) {
+        baseUrl += '/';
       }
-      $.get(base+fileName, function(md) {
-        let id = fileName.substring(0, fileName.length-3);
+
+      let id = fileName.substring(0, fileName.length-3);
+      let linkHtml = '<a '+
+          (classes ? 'class="'+classes+'"' : '')+
+          ' onclick="show(\''+id+'\')">'+label+'</a>'
+      $('.toc').append(linkHtml);
+
+      $.get(baseUrl+fileName, function(md) {
         let html = '<div id="'+id+'" class="hidden"> \n' +
           '<h1>'+label+'</h1> \n'+
           converter.makeHtml(md)+'\n'+
           '</div>';
         $('.content').append(html);
 
-        let linkHtml = '<a '+
-            (classes ? 'class="'+classes+'"' : '')+
-            ' onclick="show(\''+id+'\')">'+label+'</a>'
-        $('.toc').append(linkHtml);
-
-        markdownPagesLoaded++;
         // If this was the last page to be loaded
+        markdownPagesLoaded++;
         if (markdownPagesToLoad==markdownPagesLoaded) {
           if (window.location.hash && window.location.hash.startsWith('#')) {
             showContent(window.location.hash.substring(1));
