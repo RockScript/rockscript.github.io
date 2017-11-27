@@ -1,0 +1,52 @@
+RockScript is scripting engine to coordinates service invocations. You write scripts that 
+invoke services.  The RockScript engine executes the scripts resilient and non-blocking.
+
+RockScript is the better alternative for using message queues.  When you want to combine 
+multiple service invocations you can't use plain code because your server could crash while 
+some invocations have succeeded and some may not have started yet.  The typical way to 
+deal with this is message queues. But using message queues, you have to cut your code into 
+individual message handlers, configure your code to queues and it quickly becomes really 
+hard to understand the overall logic.  With RockScript it's easy to read your business logic 
+in the scripts. 
+
+Because RockScript does persistent, non-blocking execution of service functions, they
+can be *long running*.  Service function invocations can take seconds to days or
+even months without any problem.  No memory or thread resources are consumed by the
+RockScript server while waiting for a service function to complete.
+
+Because RockScript language is a subset of JavaScript, it's really easy to perform data
+transormations between service function invocations.
+
+For more reasons why and when to use RockScript, see <a onclick="show('why-and-when')">Why and 
+when</a>
+
+# The RockScript language
+
+The RockScript language is a subset of JavaScript. For example:
+
+```javascript
+var http = system.import('rockscript.io/http');
+var approvalService = system.import('localhost:3000');
+
+/* get is a service function on the built-in http service */
+var chuckResponse = http.get({url:'http://api.icndb.com/jokes/random'});
+
+/* approve is a service function on the external approval service */
+approvalService.approve(chuckResponse.body.value.joke);
+```
+
+For more details about which subset of JavaScript is supported, see 
+<a onclick="show('language')">RockScript language</a>
+
+# The RockScript set up
+
+RockScript comes in the form of a server.  The server stores scripts and script executions
+and it also performs the script executions.
+
+RockScript has out of the box services such as plain HTTP with functions get, post, put
+and delete.
+
+It's easy to plug in your own services. A service bridge is a component you write in any
+programming language and host separately from the RockScript server.  As long as it complies
+with the HTTP based RockScript service function SPI, you can make any REST API, SaaS product
+API or other operation available in RockScript as a service function.
