@@ -1,13 +1,19 @@
-RockScript is a subset of JavaScript (ECMAScript 5.1)
+RockScript is a subset of JavaScript (ECMAScript 5.1)  This page documents 
+which subset of JavaScript is supported. At the moment, only a very limited 
+subset is supported.  We are working hard to expand our coverage.  
 
-TODO document or reference to explanation on how this is different from node or other javascript platforms
+If you wonder why RockScript doesn't just use Node.js,  
+<a onclick="scrollOnSamePage('rockscriptvsnodejs')">see below</a>.  
 
-At the moment, only a very limited subset is supported.  We are working hard to expand.
+The main reason for us to choose 
+JavaScript as the syntax is that it's familiar for most developers and has a low 
+threshold to get started.  It's also ideal for the data transformations between 
+service functions as most services nowadays are based on JSON. 
 
-### `system` variable
+### System variable
 The `system` variable is made available to every script.  It provides a mechanism to import activities, access the script input and (over time) other interactions with the runtime server environment.
 
-### `system.import`
+#### `system.import`
 E.g.
 ```javascript
 var http = system.import('rockscript.io/http');
@@ -20,7 +26,7 @@ To learn about how to add activities to the engine, see
  * [[Activities over HTTP]]
  * [[Activities in Java]]
 
-### `system.input`
+#### `system.input`
 
 When starting a script, you can pass in data.  That input data 
 is made available in the script under the `system.input` property.
@@ -44,12 +50,13 @@ You can access the countryCode in the script like this:
 
 `var countryCode = system.input.countryCode;`
 
-### Script
+### Script block
 
 Just like in JavaScript environments, the full script text itself is considered a block and 
 the list of statements are executed sequential.
 
 ### Variable declaration
+
 Examples
 ```javascript
 var variableName;
@@ -85,3 +92,15 @@ false
 { country: 'US' }
 [ 'a', 'b', 'c']
 ```
+
+### RockScript vs Node.js
+
+The purpose of RockScript is resilient script execution.  In order to do this, we 
+need continuations.  This means that need the ability to serialize the complete 
+runtime state of a script execution when the script is waiting for external 
+callbacks.  And when the server gets a callback, we need to restore the 
+runtime state from the persisted state and then resume execution at that 
+position in the script.  Serializing and deserializing execution state 
+and resuming an execution after deserializing it is something that other 
+script engines can't do so that's why we created RockScript.
+
