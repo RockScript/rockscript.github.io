@@ -37,3 +37,21 @@ approvalService.approve(chuckResponse.body.value.joke);
 
 For more details about which subset of JavaScript is supported, see 
 <a onclick="show('language')">RockScript language</a>
+
+## Terminology
+
+The *RockScript server* is the server that manages scripts and script executions.
+
+![RockScript Overview](img/overview.png)
+
+A *script* on the server can be identified by its name and has multiple *script version*s. 
+
+*Deploying* a script means saving the script on the server so that script executions 
+can be started for that script.  A *script execution* is one execution of a script version.  
+
+A *service* makes external API, system, service or functionality available as functions 
+in the RockScript engine. A *service function* is a single RCP style operation that 
+can be invoked in the script like a normal function.
+
+A *service object*, like eg `http` and `approvalService` in the example above, is 
+the script object that exposes the service functions in the script.

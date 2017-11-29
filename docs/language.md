@@ -2,18 +2,20 @@ RockScript is a subset of JavaScript (ECMAScript 5.1)  This page documents
 which subset of JavaScript is supported. At the moment, only a very limited 
 subset is supported.  We are working hard to expand our coverage.  
 
-If you wonder why RockScript doesn't just use Node.js,  
-<a onclick="scrollOnSamePage('rockscriptvsnodejs')">see below</a>.  
+If you wonder why RockScript doesn't just use Node.js, <a onclick="scrollOnSamePage('rockscriptvsnodejs')">see 
+at the bottom of this page</a>.  
 
-The main reason for us to choose 
-JavaScript as the syntax is that it's familiar for most developers and has a low 
-threshold to get started.  It's also ideal for the data transformations between 
-service functions as most services nowadays are based on JSON. 
+The main reason for us to choose JavaScript as the syntax is that it's familiar 
+for most developers and has a low threshold to get started.  It's also ideal for 
+the data transformations between service functions as most services nowadays are 
+based on JSON. 
 
-### System variable
-The `system` variable is made available to every script.  It provides a mechanism to import activities, access the script input and (over time) other interactions with the runtime server environment.
+## System variable
+The `system` variable is made available to every script.  It provides a mechanism 
+to import activities, access the script input and (over time) other interactions 
+with the runtime server environment.
 
-#### `system.import`
+#### system.import
 E.g.
 ```javascript
 var http = system.import('rockscript.io/http');
@@ -26,14 +28,13 @@ To learn about how to add activities to the engine, see
  * [[Activities over HTTP]]
  * [[Activities in Java]]
 
-#### `system.input`
+#### system.input
 
 When starting a script, you can pass in data.  That input data 
 is made available in the script under the `system.input` property.
 
 An example:
 
-When starting a script like this, 
 ```
 POST http://localhost:3652/command 
 Content-Type: application/json
@@ -50,12 +51,12 @@ You can access the countryCode in the script like this:
 
 `var countryCode = system.input.countryCode;`
 
-### Script block
+## Script block
 
 Just like in JavaScript environments, the full script text itself is considered a block and 
 the list of statements are executed sequential.
 
-### Variable declaration
+## Variable declaration
 
 Examples
 ```javascript
@@ -64,7 +65,7 @@ var variableName = 'initial value';
 var variableName = system.import('rockscript.io/http');
 ```
 
-### Expression
+## Expression
 
 #### Variable expressions
 Examples
@@ -78,7 +79,7 @@ Or a combination of the above like eg
 ```
 variableName.propertyName(arg0, arg1)['field'].anotherPropertyName;
 ```
-Note that for function/activity invocations, any number of args is allowed.
+Note that for service function invocations, any number of args is allowed.
 
 #### Literal expressions
 
@@ -93,7 +94,7 @@ false
 [ 'a', 'b', 'c']
 ```
 
-### RockScript vs Node.js
+## RockScript vs Node.js
 
 The purpose of RockScript is resilient script execution.  In order to do this, we 
 need continuations.  This means that need the ability to serialize the complete 

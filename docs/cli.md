@@ -1,6 +1,6 @@
 tl;dr :
 
-> `./install.sh` installs the `rock` script in `/usr/local/bin`, <br />
+> `./install.sh` installs `rock` in `/usr/local/bin`, <br />
 Then type `rock`+Enter to as the command line tool. 
 
 The details: 
@@ -16,16 +16,16 @@ line client is available in the executable jar file `rockscript-cli/target/rocks
 
 The most basic way to use the command line client is the command
 ```
-java -jar rockscript-cli/target/rockscript-cli.jar [command-line-options>]
+java -jar rockscript-cli/target/rockscript-cli.jar [command-line-args]
 ``` 
 
 
 But it's much cooler to create a short command for this.  Use the 
 `./install.sh` to create a **`rock`** executable script in 
-`/usr/local/bin/rock`.  That will reduce the above command line to 
+`/usr/local/bin/rock`.  That will reduce the command line usage to 
 
 ```bash
-rock [command-line-options>]
+rock [command-line-args]
 ```
 
 On Mac OS X, you can use the script `./install.sh` to create 
@@ -44,24 +44,22 @@ java -jar rockscript-cli/target/rockscript-cli.jar %*
 To get an overview of all the commands, just type `rock <Enter>` 
 
 ```
-> rock
+$ rock 
 Usage: rock [command] [command options]
 
 rock help [command]          | Shows help on a particular command
-rock server [server options] | Start the rockscript server
 rock ping [ping options]     | Test the connection with the server
 rock deploy [deploy options] | Deploy script files to the server
 rock start [start options]   | Starts a new script execution
-rock end [end options]       | Ends a waiting activity
+rock end [end options]       | Ends a waiting service function invocation
+rock test [test options]     | Runs tests
 rock                         | Shows this help message
-
-More details at https://github.com/rockscript/rockscript/wiki/RockScript-API
 ```
 
 To get help on a specific command, type `rock help <command>`  Eg
 
 ```
-> rock help deploy
+$ rock help deploy
 rock deploy : Deploys script files to the server
 
 usage: rock deploy [deploy options] [file or directory]
