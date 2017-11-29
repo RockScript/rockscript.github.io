@@ -15,15 +15,16 @@ layout: base
     <div class="home">
       <div class="description">
         <p>
-          Write blocking JavaScript and get non-blocking, resilient execution.
+          Keeping consistency over multiple microservices invocations is a challenge.  
+          Using normal programming languages lead to inconsistencies.  And message 
+          queues require a lot of configuration and you have to cut your code in pieces.
         </p>
         <p>
-          RockScript lets you code your business logic in a much more 
-          readable style compared to lower level message queues.
-        </p>
-        <p>
-          It's ideal for integrating microservices in an event driven
-          architecture and processing pipelines.
+          With RockScript, you write scripts that are easy to read and that span multiple 
+          service interactions.  The RockScript engine gives you resilient execution
+          and the option to use long running service functions. Write blocking code and 
+          get non-blocking execution.  It's ideal for integrating microservices in an 
+          event driven architecture and processing pipelines.
         </p> 
       </div>
       <div class="footer-col-wrapper">
@@ -52,8 +53,8 @@ layout: base
           <!--End mc_embed_signup-->
         </div>
         <div class="footer-col footer-col-2">
-          <a class="light-grey-box" href="https://github.com/rockscript/rockscript/wiki">
-            What, why and how
+          <a class="light-grey-box" href="docs/">
+            Check out the documentation
           </a>
           <a class="light-grey-box" href="/products#webui">
             See the killer feature
