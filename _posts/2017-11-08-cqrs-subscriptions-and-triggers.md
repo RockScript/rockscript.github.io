@@ -37,5 +37,5 @@ I think that [IFTTT](https://ifttt.com/), [Zapier](https://zapier.com/) and thei
 value of subscriptions for consumers.  That is exactly one of the use cases that 
 RockScript envisions, but than for developers.  An event triggers a script.  The script calls out to a number of 
 commands in other services.  API Commands should be mapped to RockScript activities.  Either by yourself or by using 
-an existing activity worker. And we also envision the addition of a trigger as a reusable, configurable subscription 
+an existing serviceFunction worker. And we also envision the addition of a trigger as a reusable, configurable subscription 
 that starts a RockScript.   

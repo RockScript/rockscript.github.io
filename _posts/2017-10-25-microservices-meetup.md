@@ -14,7 +14,7 @@ Learn how easy it is to build resilient integrations between microservices, SaaS
 API’s and cloud service API’s.  RockScript is easy because it leverages JavaScript syntax. 
 The engine persists the execution state with event sourcing.  This enables long running 
 activities, crash recovery and extreme visibility.  We’ll explain the the core concept 
-of an activity and how it enables more readable business logic in the scripts and prevents 
+of an serviceFunction and how it enables more readable business logic in the scripts and prevents 
 that error handling and operational aspects creep in the code.  We’ll also compare 
 RockScript to alternatives like AWS Step Functions, Netflix Conductor and Microsoft 
 Logic Apps. 

@@ -88,7 +88,7 @@ $ rock test
     "testName": "./docs/examples/test/list-trains-test-nok.rst",
     "events": [
       ...normal script execution events...
-      { "activityError": {
+      { "serviceFunctionError": {
           "time": "2017-11-07T16:04:30.574Z",
           "scriptExecutionId": "se2",
           "executionId": "e7",
@@ -97,7 +97,7 @@ $ rock test
           "scriptId": "sv4"
         }
       },
-      { "activityError": {
+      { "serviceFunctionError": {
           "time": "2017-11-07T16:04:30.575Z",
           "scriptExecutionId": "se1",
           "executionId": "e7",
