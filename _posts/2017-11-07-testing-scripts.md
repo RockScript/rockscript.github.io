@@ -102,7 +102,7 @@ $ rock test
           "scriptExecutionId": "se1",
           "executionId": "e7",
           "line": 3.0,
-          "error": "ScriptVersion start failed: Couldn\u0027t execute request https://irailWithATypo.be/stations/NMBS?q\u003dTurnhout: irailWithATypo.be: nodename nor servname provided, or not known",
+          "error": "Script start failed: Couldn\u0027t execute request https://irailWithATypo.be/stations/NMBS?q\u003dTurnhout: irailWithATypo.be: nodename nor servname provided, or not known",
           "scriptId": "sv2"
         }
       }
@@ -117,7 +117,7 @@ $ rock test
 
 XXX ./docs/examples/test/list-trains-test-nok.rst
 XXX    [scriptId:sv4,line:3] Couldn't execute request https://irailWithATypo.be/stations/NMBS?q=Turnhout: irailWithATypo.be: nodename nor servname provided, or not known
-XXX    [scriptId:sv2,line:3] ScriptVersion start failed: Couldn't execute request https://irailWithATypo.be/stations/NMBS?q=Turnhout: irailWithATypo.be: nodename nor servname provided, or not known
+XXX    [scriptId:sv2,line:3] Script start failed: Couldn't execute request https://irailWithATypo.be/stations/NMBS?q=Turnhout: irailWithATypo.be: nodename nor servname provided, or not known
  ✓  ./docs/examples/test/list-trains-test-ok.rst
 
 Damn! 1 tests failed :(

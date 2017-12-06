@@ -15,6 +15,8 @@ layout: base
     <div class="home">
       <div class="description">
         <p>
+          Why break your code with message queues when you can script your HTTP service 
+          invocations? 
           Keeping consistency over multiple microservices invocations is a challenge.  
           Using normal programming languages lead to inconsistencies.  And message 
           queues require a lot of configuration and you have to cut your code in pieces.
@@ -69,5 +71,3 @@ layout: base
     </div>
   </div>
 </main>
-
-
