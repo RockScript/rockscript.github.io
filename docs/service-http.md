@@ -1,6 +1,25 @@
+The HTTP service provides functions get, post, put and delete.
+The service is a built-in service and can be imported with 
+url `rockscript.io/http`
+
 ## get
 
 Performs a HTTP get request.
+
+#### Example
+
+```
+var http = system.import('rockscript.io/http');
+
+var servicePort = 9898;
+var response = http.get({
+  url: 'http://localhost:' + servicePort + '/?p1=v1&p2=v2',
+  headers: {
+    Header-One: 'singlevalue'
+    Header-Two: ['array', 'value']
+  }
+});
+```
 
 #### Input parameters
 
@@ -53,35 +72,39 @@ var response = http.get({
 
 This request will now fail if the response status is not 200.
 
+#### Retries
+
 In case of a failure, the default is to retry 3 times 
 with incremental backoff.  You can customize the retry policy.
 Please ask for details how to do that 
 [in a Github issue](https://github.com/rockscript/rockscript/issues/new?title=How+to+specify+incremental+backoff+in+the+http+service?).
+
+## post
+
+Same as for service function `get`, except for the `body` property.  
+In a post, you can specify a body.
 
 #### Example
 
 ```
 var http = system.import('rockscript.io/http');
 
-var servicePort = 9898;
-var response = http.get({
-  url: 'http://localhost:' + servicePort + '/?p1=v1&p2=v2',
+var response = http.post({
+  url: 'http://localhost/orders',
   headers: {
-    Header-One: 'singlevalue'
-    Header-Two: ['array', 'value']
+    Content-Type: application/json
+  },
+  body: {
+    item: 'Donut',
+    amount: 6
   }
 });
 ```
 
-## post
-
-TODO
-
 ## put
 
-TODO
+Same as post (with body property)
 
 ## delete
 
-TODO
-
+Same as get (without body property)
