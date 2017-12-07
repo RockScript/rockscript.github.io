@@ -16,4 +16,4 @@ plugins:
   - jekyll-feed
 
 exclude:
-  - docs/
+  - docs/*.md
