@@ -16,7 +16,6 @@ node_modules/
 .Trashes
 *.iml
 *.class
-*.jar
 *.war
 *.rar
 *.tar
