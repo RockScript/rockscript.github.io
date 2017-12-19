@@ -97,3 +97,28 @@ header.next {
 .rss-subscribe {
   float: right;
 }
+
+div.download {
+  text-align:center;
+  verticle-align:middle;
+}
+
+div.download > a {
+  width:280px;
+  text-align:center;
+  vertical-align:middle;
+  display:inline-block;
+  border-radius:5px;
+  margin: 30px;
+}
+
+div.download div.version {
+  font-style: italic;
+  font-size: .9em;
+  margin-top: 10px;
+}
+
+.screenshot-title {
+  text-align: center;
+  font-size: .8em;
+}

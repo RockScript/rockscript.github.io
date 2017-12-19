@@ -1,19 +1,10 @@
 ---
-layout: base
+layout: page
 title: Products
 permalink: /products/
 order: 2
 ---
 
-
-<main class="page-content" aria-label="Content">
-  <div class="wrapper">
-    <article class="post">
-
-<header class="post-header">
-  <h1 id="webui" class="post-title">Products</h1>
-</header>
-    
 <h2>RockScript Server</h2>
 <p>The full functionality of the RockScript server is available under 
 The Apache License v2.  This includes a HTTP web API and a command
@@ -22,26 +13,42 @@ Check out <a href="https://github.com/rockscript/rockscript/wiki">the RockScript
 open source project on GitHub</a>.
 </p>
 
-<h2 id="webui">RockScript Web UI</h2>
-<p>The RockScript Web UI will contain
+<h2 id="webui">RockScript App</h2>
+<p>The RockScript App contains
 <ul>
-  <li>Script editor</li>
-  <li>Script execution inspector</li>
-  <li>External dependencies monitoring</li>
+  <li>RockScript open source server</li>
+  <li>Web UI script editor</li>
+  <li>Web UI execution inspector</li>
 </ul>
-Below, you can see a preview of the execution inspector we're building. The script execution 
-viewer gives a debugger experience for ongoing or past script executions.  That's possible 
-because script executions are stored with event sourcing.
-</p>
-<p>
-Click on the image to get an impression of how the script execution inspector works.
-</p>
 
+<div>
+    The RockScript App is not open source.
+    This early access version is still free.
+    A quick registration is required.
+</div>
+<div class="download">
+    <a class="light-grey-box" href="https://goo.gl/vdgHdG">
+      Download the RockScript App
+      <div class="version">(Early access version)</div>
+    </a>
+</div>
+
+Screenshots
+
+<div style="display:flex; flex-direction: row;">
 <figure>
-<a href="{{ site.baseurl }}/assets/execution-inspector/index.html">
-  <div class="screenshot-border"><img class="screenshot" src="{{ site.baseurl }}/assets/screenshot.png" /></div>
+<div class="screenshot-title">Script editor</div>
+<a href="{{ site.baseurl }}/assets/screenshot-script-editor.png">
+  <div class="screenshot-border"><img class="screenshot" src="{{ site.baseurl }}/assets/screenshot-script-editor.png" height="200px" /></div>
 </a>
 </figure>
+<figure style="margin-left:15px;">
+<div class="screenshot-title">Execution inspector</div>
+<a href="{{ site.baseurl }}/assets/screenshot-execution-inspector.png">
+  <div class="screenshot-border"><img class="screenshot" src="{{ site.baseurl }}/assets/screenshot-execution-inspector.png" height="200px" /></div>
+</a>
+</figure>
+</div>
 
 <h2>RockScript Consulting</h2>
 <p>Being the company behind RockScript, we put you on the right track with our 
@@ -49,7 +56,4 @@ in-depth expertise, we validate your architecture and help you deliver integrati
 you need.  For pricing and availability, 
 <a class="red-button" href="#" onclick="emailUs(this)">Contact us</a> 
 </p>
-
-    </article>
-  </div>
-</main>
+    
