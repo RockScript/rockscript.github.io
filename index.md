@@ -5,7 +5,7 @@ layout: base
 <div class="tagline-full-width">
   <div class="wrapper">
     <div class="tag-line">
-      Resilient microservice integration
+      Resilient & distributed script execution
     </div>
   </div>
 </div>
@@ -15,19 +15,15 @@ layout: base
     <div class="home">
       <div class="description">
         <p>
-          Why break your code with message queues when you can script your HTTP service 
-          invocations? 
-          Keeping consistency over multiple microservices invocations is a challenge.  
-          Using normal programming languages lead to inconsistencies.  And message 
-          queues require a lot of configuration and you have to cut your code in pieces.
+          The RockScript server keeps persistent track of your script executions with event sourcing. 
+          This includes all the variable changes and the exact position in the script.  Service functions 
+          are executed non-blocking so they can be long running.
         </p>
         <p>
-          With RockScript, you write scripts that are easy to read and that span multiple 
-          service interactions.  The RockScript engine gives you resilient execution
-          and the option to use long running service functions. Write blocking code and 
-          get non-blocking execution.  It's ideal for integrating microservices in an 
-          event driven architecture and processing pipelines.
-        </p> 
+          Use RockScript to keep consistency over multiple microservices invocations 
+          and monitor which service invocations fail. RockScript fits perfect in an 
+          event-driven architecture. 
+        </p>
       </div>
       <div class="footer-col-wrapper">
         <div class="footer-col footer-col-1">
