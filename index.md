@@ -22,7 +22,8 @@ layout: base
         <p>
           Use RockScript to keep consistency over multiple microservices invocations 
           and monitor which service invocations fail. RockScript fits perfect in an 
-          event-driven architecture. 
+          event-driven architecture and is targetted to run in public and private cloud 
+          environments. 
         </p>
       </div>
       <div class="footer-col-wrapper">

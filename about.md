@@ -13,7 +13,7 @@ creating [jBPM](https://www.jbpm.org), (JBoss / Red Hat), [Activiti](https://www
 (Alfresco) and SaaS BPM product [Workflow Accellerator](https://www.signavio.com/products/workflow-accelerator/) 
 (Signavio).
 
-With RockScript our goal is to make microservice integration orders of magnitude simpler 
+Our mission is to make distributed event-driven services orders of magnitude easier to  
 to build, maintain and operate.
 
 Don't hesitate to <a class="red-button" href="#" onclick="emailUs(this)">Email us</a>
