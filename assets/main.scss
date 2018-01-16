@@ -4,15 +4,32 @@
 
 @import "minima";
 
+.index-title {
+  font-weight: bold;
+  font-size: .9em;
+}
 
+div.description .index-paragraph:nth-child(n+2) {
+  margin-top: 20px;
+}
+
+.index-paragraph {
+  font-size: .9em;
+}
+
+.tagline-full-width {
+  background-image: url(screenshot-background.png);
+  background-position: center;
+  background-repeat: repeat;
+  padding: 20px 0;
+}
 
 .tag-line {
   background-color: #1a90bf;
   color: white;
-  display: inline-block;
+  display: block;
   font-size: 42px;
   letter-spacing: -2px;
-  margin: 35px 0;
   padding: 0 10px;
 }
 
@@ -20,13 +37,6 @@
   letter-spacing: -0.5px;
   font-size: 1.125em;
   margin: 0 0 30px 0;
-}
-
-.tagline-full-width {
-  height: 200px;
-  background-image: url(screenshot-background.png);
-  background-position: center;
-  background-repeat: repeat;
 }
 
 .newsletter {

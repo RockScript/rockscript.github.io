@@ -5,7 +5,7 @@ layout: base
 <div class="tagline-full-width">
   <div class="wrapper">
     <div class="tag-line">
-      Resilient & distributed script execution
+      Durable script execution for stitching microservices and serverless functions
     </div>
   </div>
 </div>
@@ -14,17 +14,25 @@ layout: base
   <div class="wrapper">
     <div class="home">
       <div class="description">
-        <p>
-          The RockScript server keeps persistent track of your script executions with event sourcing. 
-          This includes all the variable changes and the exact position in the script.  Service functions 
-          are executed non-blocking so they can be long running.
-        </p>
-        <p>
-          Use RockScript to keep consistency over multiple microservices invocations 
-          and monitor which service invocations fail. RockScript fits perfect in an 
-          event-driven architecture and is targetted to run in public and private cloud 
-          environments. 
-        </p>
+        <div class="index-paragraph">
+          <div class="index-title">Durable script execution</div>
+          Transactions don't work over HTTP.  Instead use RockScript to maintain consistency over 
+          a combination of queries, transformations and updates.
+        </div>
+        <div class="index-paragraph">
+          <div class="index-title">Code your workflows</div>
+          Instead of graphical tools, developers prefer code.  RockScript is based on JavaScript.
+        </div>
+        <div class="index-paragraph">
+          <div class="index-title">Event-driven</div>
+          RockScript supports non-blocking and long-running service functions.  And it targets
+          event-driven microservices and serverless cloud functions.  
+        </div>
+        <div class="index-paragraph">
+          <div class="index-title">Separate business logic from boiler plate</div>
+          By splitting business logic in the script from service function implementations details, 
+          your code gets more readable and maintainable. 
+        </div>
       </div>
       <div class="footer-col-wrapper">
         <div class="footer-col footer-col-1">
