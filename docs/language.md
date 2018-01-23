@@ -82,7 +82,7 @@ result.message['firstName'] = 'John';
 ## If-then-else
 
 The condition expression will be converted to a boolean.  See also 
-[Boolean expressions](#boolean_expressions) for which comparators are supported.
+[Comparison operator expressions](#comparison-operator-expressions) for which comparators are supported.
 
 Examples
 ```javascript
@@ -101,6 +101,19 @@ if (flipper==='on') {
 
 ## Expressions
 
+#### Literal expressions
+
+Examples
+```javascript
+'some text'
+1
+5.0
+true
+false
+{ country: 'US' }
+[ 'a', 'b', 'c']
+```
+
 #### Variable expressions
 Examples
 ```javascript
@@ -115,7 +128,14 @@ variableName.propertyName(arg0, arg1)['field'].anotherPropertyName;
 ```
 Note that for service function invocations, any number of args is allowed.
 
-#### Boolean expressions
+#### Comparison operator expressions
+
+All of [Equality comparisons and sameness](https://developer.mozilla.org/nl/docs/Web/JavaScript/Equality_comparisons_and_sameness) 
+is implemented 
+
+> Limitation: object conversion functions like `toString ` and `valueOf` are not invoked yet 
+
+For now, only == and === are supported
 
 Examples
 ```javascript
@@ -123,22 +143,24 @@ text=='some text'
 text==='some text'
 ```
 
-All of [Equality comparisons and sameness](https://developer.mozilla.org/nl/docs/Web/JavaScript/Equality_comparisons_and_sameness) 
-is implemented except Object.is(...) and the use of object conversion functions like `toString ` and `valueOf`
+> TODO: !=, <, >, <=, >=, !== etc
 
-TODO <, >, <=, >= etc
+#### Arithmic operator expressions
 
-#### Literal expressions
+All the addition conversions are correctly applied like in Node.js 
+
+> Limitation: invoking the object `toString` and `valueOf` methods.
+
+For now, only the addition `+` is supported:
 
 Examples
 ```javascript
-'some text'
-5.0
-true
-false
-{ country: 'US' }
-[ 'a', 'b', 'c']
+'hello' + ' world' 
+5 + ' EUR'
+'Formula ' + true
 ```
+
+> TODO: -, *, /, %. **, ++, --
 
 ## RockScript vs Node.js
 
