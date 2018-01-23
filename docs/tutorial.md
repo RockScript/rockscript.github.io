@@ -1,6 +1,11 @@
+---
+layout: docs
+title: Tutorial
+---
+
 ## Prerequisites
 
- * A running RockScript server.  See <a onclick="show('getting-started')">Getting started</a> 
+ * A running RockScript server.  See [Getting started](getting-started) 
  * NodeJS 7.7.1+
 
 ## Your first script
@@ -47,7 +52,7 @@ When we deploy the script to the server, we
 * Mark the new script version as the active script version.  The active script version is the version that is started 
   when a new execution is started.
   
-For more about deployment and versioning, see <a onclick="show('script-versioning')">Script versioning</a>    
+For more about deployment and versioning, see [Script versioning](script-versioning)    
 
 #### Deploy using the rock command
 
@@ -153,5 +158,5 @@ has stored.
 curl http://localhost:3652/query?q=execution\&id=se1
 ```
 
-Next, check out the <a onclick="language">language details</a> 
+Next, check out the [language details](language) 
 and become a RockScript wizard.

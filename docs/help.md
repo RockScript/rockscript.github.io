@@ -1,3 +1,8 @@
+---
+layout: docs
+title: Help
+---
+
 Please use [GitHub issues as our forum](https://github.com/rockscript/rockscript/issues).
 
 Don't hesitate to ask your questions.

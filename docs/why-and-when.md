@@ -1,7 +1,12 @@
+---
+layout: docs
+title: Why and when
+---
+
 If you just want to get your first script running asap, feel free to skip this 
 background information and jump straight to the 
-<a onclick="show('getting-started')">geting started</a> and 
-<a onclick="show('tutorial')">the tutorial</a>.
+[geting started](getting-started) and 
+[the tutorial](tutorial).
 
 ## Resilient script execution 
 

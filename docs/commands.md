@@ -1,3 +1,8 @@
+---
+layout: docs
+title: Commands
+---
+
 Commands are RPC style operations that change the state of the RockScript server.
 Commands are invoked by a HTTP POST to `http://localhost:3652/command` with the command
 JSON as the body.  We hope to add message based API later.

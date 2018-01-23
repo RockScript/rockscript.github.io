@@ -1,3 +1,7 @@
+---
+layout: docs
+title: Project status
+---
 
 **RockScript does not offer any stability guarantees at this point.**
  

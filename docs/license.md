@@ -1,3 +1,8 @@
+---
+layout: docs
+title: License
+---
+
 The full RockScript server, command line interface and web API are 
 [Apache License V2](https://github.com/rockscript/rockscript/blob/master/LICENSE)  
 

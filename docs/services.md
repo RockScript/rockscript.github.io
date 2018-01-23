@@ -1,5 +1,10 @@
+---
+layout: docs
+title: Services
+---
+
 Services are made available to scripts through `system.import` as 
-explained in <a onclick="show('language')">Language</a>.
+explained in [Language](language).
 
 There are 2 built-in services at the moment (We hope to expand this 
 list. Your contribution can help)

@@ -1,3 +1,8 @@
+---
+layout: docs
+title: HTTP service
+---
+
 The HTTP service provides functions get, post, put and delete.
 The service is a built-in service and can be imported with 
 url `rockscript.io/http`

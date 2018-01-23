@@ -1,7 +1,12 @@
+---
+layout: docs
+title: Commands
+---
+
 Creates a new script version on the server and activates it.  The active  
 script version will be used when starting a new script execution for the script.
 
-@see also <a onclick="show('script-versioning')">Script versioning</a>  
+@see also [Script versioning](script-versioning)  
 
 ## Example
 Here's a `saveScript` example
@@ -42,7 +47,7 @@ Here's a `saveScript` example
 | `scriptName` | String |Name of the script |
 | `version` | Number |Sequential version number assigned by the server for this version, starts at 1 |
 | `text` | String | Text of this script version |
-| `active` | Boolean | true if this is the active version, absent if this is not the active version.  See <a onclick="show('script-versioning')">Script versioning</a>  |
+| `active` | Boolean | true if this is the active version, absent if this is not the active version.  See [Script versioning](script-versioning)  |
 
 ## Failures
 

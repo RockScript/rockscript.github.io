@@ -1,6 +1,11 @@
+---
+layout: docs
+title: API
+---
+
 The RockScript API is a HTTP API that consists of
-* <a onclick="show('commands')">Commands</a>
-* <a onclick="show('queries')">Queries</a>
+* [Commands](commands)
+* [Queries](queries)
 
 ## Port
 The default port for RockScript server is 3652

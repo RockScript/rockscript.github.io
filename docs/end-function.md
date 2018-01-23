@@ -1,3 +1,8 @@
+---
+layout: docs
+title: End function
+---
+
 Ends a waiting function invocation in a script execution.
 
 ### Example

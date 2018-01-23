@@ -1,3 +1,8 @@
+---
+layout: docs
+title: Getting started
+---
+
 ## Open source server vs commercial app
 
 In order to fund further development of RockScript, we are building a commercial 
@@ -64,7 +69,7 @@ You eventually should see output like
  
 That means you have successfully created 
  * `rockscript-server/target/rockscript.jar`
- * `rockscript-cli/target/rockscript-cli.jar` (see <a onclick="show('cli')">Command line args</a>)
+ * `rockscript-cli/target/rockscript-cli.jar` (see [Command line args](cli)</a>)
  
 ## Starting the RockScript server
 
@@ -93,5 +98,5 @@ To check that you have the server running, you can just check open
 the documentation that is included in the server. Point your browser 
 to [http://localhost:3652/](http://localhost:3652/)
 
-Next, take <a onclick="show('tutorial')">the 5 minute tutorial</a> and get your first 
+Next, take [tutorial](the 5 minute tutorial) and get your first 
 script running.

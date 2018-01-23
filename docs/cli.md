@@ -1,3 +1,8 @@
+---
+layout: docs
+title: CLI
+---
+
 tl;dr :
 
 > `./install.sh` installs `rock` in `/usr/local/bin`, <br />
@@ -11,7 +16,7 @@ After you built the project with
 mvn -Pizza clean install
 ```
 
-like explained in <a onclick="show('getting-started')">Getting started</a>, the command 
+like explained in [Getting started](getting-started), the command 
 line client is available in the executable jar file `rockscript-cli/target/rockscript-cli.jar`.
 
 The most basic way to use the command line client is the command

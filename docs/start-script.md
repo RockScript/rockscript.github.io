@@ -1,6 +1,11 @@
+---
+layout: docs
+title: Start script
+---
+
 Starts a new script execution.  If you identify a script with properties 
 `scriptId` or `scriptName`, then the latest version of that script will 
-be used.  @see also <a onclick="show('script-versioning')">Script versioning</a>
+be used.  @see also [Script versioning](script-versioning)
 
 ## Example
 Here's a `startScript` example
@@ -28,7 +33,7 @@ Here's a `startScript` example
 | `scriptId` | One of `scriptId` or `scriptName` or `scriptVersionId` is required | String | ID that identifies the script for which the latest version should be started |
 | `scriptName` | One of `scriptId` or `scriptName` or `scriptVersionId` is required | String | Name that identifies the script for which the latest version should be started |
 | `scriptVersionId` | One of `scriptId` or `scriptName` or `scriptVersionId` is required | String | The ID of the exact script version that should be started |
-| `input` | Optional | Any json type | The system.input value.  See also <a onclick="show('language')">Language</a>   |
+| `input` | Optional | Any json type | The system.input value.  See also [Language](language)   |
 
 ## Response properties
 

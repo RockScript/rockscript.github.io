@@ -1,9 +1,17 @@
-RockScript is a subset of JavaScript (ECMAScript 5.1)  This page documents 
-which subset of JavaScript is supported. At the moment, only a very limited 
-subset is supported.  We are working hard to expand our coverage.  
+---
+layout: docs
+title: Language
+---
 
-If you wonder why RockScript doesn't just use Node.js, <a onclick="scrollOnSamePage('rockscriptvsnodejs')">see 
-at the bottom of this page</a>.  
+RockScript is a subset of JavaScript (ECMAScript 5.1).  This page documents 
+which subset of JavaScript is supported. At the moment, only a very limited 
+subset is supported.  We are working hard to expand our coverage.  The reason 
+to use JavaScript is because most developers are familiar with the basic syntax 
+and it's the perfect language to [juggle with JSON](why-and-when#juggle-with-json), 
+which most API's use these days.
+
+If you wonder why RockScript doesn't just use Node.js, [see 
+at the bottom of this page](#rockscript-vs-nodejs).  
 
 The main reason for us to choose JavaScript as the syntax is that it's familiar 
 for most developers and has a low threshold to get started.  It's also ideal for 
@@ -23,7 +31,7 @@ var http = system.import('rockscript.io/http');
 
 `system.import(url)` returns a script object that exposes activities as functions.
 
-To learn about how to add activities to the engine, see <a onclick="show('services')">Services</a>
+To learn about how to add activities to the engine, see [Services](services)
 
 #### system.input
 
@@ -62,7 +70,36 @@ var variableName = 'initial value';
 var variableName = system.import('rockscript.io/http');
 ```
 
-## Expression
+## Assignment
+
+Examples
+```javascript
+result = 'initial value';
+result.message = 'hello';
+result.message['firstName'] = 'John';
+```
+
+## If-then-else
+
+The condition expression will be converted to a boolean.  See also 
+[Boolean expressions](#boolean_expressions) for which comparators are supported.
+
+Examples
+```javascript
+if (msg=='call') http.get({url: '...'});
+
+var someVar = {thisConverts:'to boolean true'};
+if (someVar) http.get({url: '...'});
+
+if (flipper==='on') {
+  http.get({url: '...'});
+  flipper = 'off';
+} else {
+  flipper = 'on';
+}
+```
+
+## Expressions
 
 #### Variable expressions
 Examples
@@ -78,10 +115,22 @@ variableName.propertyName(arg0, arg1)['field'].anotherPropertyName;
 ```
 Note that for service function invocations, any number of args is allowed.
 
+#### Boolean expressions
+
+Examples
+```javascript
+text=='some text'
+text==='some text'
+```
+
+All of [Equality comparisons and sameness](https://developer.mozilla.org/nl/docs/Web/JavaScript/Equality_comparisons_and_sameness) 
+is implemented except Object.is(...) and the use of object conversion functions like `toString ` and `valueOf`
+
+TODO <, >, <=, >= etc
+
 #### Literal expressions
 
 Examples
-
 ```javascript
 'some text'
 5.0

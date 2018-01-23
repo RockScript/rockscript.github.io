@@ -1,3 +1,8 @@
+---
+layout: docs
+title: Script versioning
+---
+
 A RockScript server stores a collection of scripts and each script has a collection
 of script versions.  Each script execution runs against a particular script version.
 Once started, script executions keep running in the same script version.
