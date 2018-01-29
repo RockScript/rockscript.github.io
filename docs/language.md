@@ -3,20 +3,19 @@ layout: docs
 title: Language
 ---
 
-RockScript is a subset of JavaScript (ECMAScript 5.1).  This page documents 
-which subset of JavaScript is supported. At the moment, only a very limited 
-subset is supported.  We are working hard to expand our coverage.  The reason 
-to use JavaScript is because most developers are familiar with the basic syntax 
-and it's the perfect language to [juggle with JSON](why-and-when#juggle-with-json), 
-which most API's use these days.
+RockScript is a subset of JavaScript (ECMAScript 5.1).   The main goal of 
+RockScript is to support resilient, non-blocking script execution. We aim 
+to implement the most used constructs to enable the stitching of service 
+functions.   
 
-If you wonder why RockScript doesn't just use Node.js, [see 
-at the bottom of this page](#rockscript-vs-nodejs).  
+This page documents which subset of JavaScript is supported. We leverage 
+JavaScript for developers to  reduce the learning curve and it's the perfect 
+language to [juggle with JSON](why-and-when#juggle-with-json), which most API's 
+use these days.  But we do not aim to cover the complete language syntax. If 
+you wonder why RockScript doesn't just use Node.js, [see at the bottom of this 
+page](#rockscript-vs-nodejs).  
 
-The main reason for us to choose JavaScript as the syntax is that it's familiar 
-for most developers and has a low threshold to get started.  It's also ideal for 
-the data transformations between service functions as most services nowadays are 
-based on JSON. 
+See the [Roadmap](roadmap) for what's next.
 
 ## System variable
 The `system` variable is made available to every script.  It provides a mechanism 
@@ -99,9 +98,20 @@ if (flipper==='on') {
 }
 ```
 
+## Loops
+
+TODO (not implemented yet)
+
+## Functions
+
+At the moment we don't support declaration of functions in the script.  We're believe it's best to leave 
+out functions so that each script remains the scope of 1 function.  But this is still a hypothesis that 
+we're seeking validation on.  So [your input](https://github.com/rockscript/rockscript/issues/new?title=Function+declarations) 
+is greatly appreciated.
+
 ## Expressions
 
-#### Literal expressions
+#### Literals
 
 Examples
 ```javascript
@@ -128,28 +138,29 @@ variableName.propertyName(arg0, arg1)['field'].anotherPropertyName;
 ```
 Note that for service function invocations, any number of args is allowed.
 
-#### Comparison operator expressions
+#### Comparison operators
 
 All of [Equality comparisons and sameness](https://developer.mozilla.org/nl/docs/Web/JavaScript/Equality_comparisons_and_sameness) 
 is implemented 
 
-> Limitation: object conversion functions like `toString ` and `valueOf` are not invoked yet 
-
-For now, only == and === are supported
+> Limitation: While all automatic type conversions are implemented, object conversion functions like `toString ` and `valueOf` are not invoked yet.
 
 Examples
 ```javascript
 text=='some text'
+'25' != service.getSomeNumber()
 text==='some text'
+5 < totalAmount
+true > 0
+customer.getAge() <= 25
+'hello' >= company.getName()
 ```
 
-> TODO: !=, <, >, <=, >=, !== etc
-
-#### Arithmic operator expressions
+#### Arithmic operators
 
 All the addition conversions are correctly applied like in Node.js 
 
-> Limitation: invoking the object `toString` and `valueOf` methods.
+> Limitation: While all automatic type conversions are implemented, object conversion functions like `toString ` and `valueOf` are not invoked yet.
 
 For now, only the addition `+` is supported:
 
@@ -161,6 +172,13 @@ Examples
 ```
 
 > TODO: -, *, /, %. **, ++, --
+
+#### Logical operators and parenthesis
+
+Examples
+```javascript
+!(true || false) && true
+```
 
 ## RockScript vs Node.js
 
