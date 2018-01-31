@@ -100,9 +100,30 @@ if (flipper==='on') {
 
 ## Loops
 
-TODO (not implemented yet)
+For now, only 1 form of loop is supported.
 
-## Functions
+Example
+```javascript
+for (var i=0; i<a.length; i++) {
+  total = total + a[i];
+}
+```
+
+> Limitation: Other forms of loops are not yet supported like `do while`, `while do`, `for (non-var-declaring-expression;...;...)`, `for (a in b)` and `for (var a in b)`
+
+## Default functions and properties
+
+Strings and arrays do not have any predefined functions and properties except for property `length`.
+
+Example
+```javascript
+var a = [1, 2, 3];
+for (var i=0; i<a.length; i++) {
+  total = total + a[i];
+}
+```
+
+## Declaring functions
 
 At the moment we don't support declaration of functions in the script.  We're believe it's best to leave 
 out functions so that each script remains the scope of 1 function.  But this is still a hypothesis that 
@@ -160,18 +181,21 @@ customer.getAge() <= 25
 
 All the addition conversions are correctly applied like in Node.js 
 
-> Limitation: While all automatic type conversions are implemented, object conversion functions like `toString ` and `valueOf` are not invoked yet.
-
-For now, only the addition `+` is supported:
+Supported: `+`, `-`, `*`, `/`, `++`, `--`
 
 Examples
 ```javascript
 'hello' + ' world' 
 5 + ' EUR'
 'Formula ' + true
+count * 5
+i++
 ```
 
-> TODO: -, *, /, %. **, ++, --
+> Limitations: `%` and `**` are not yet supported.  
+> And for the conversions, while all automatic type 
+> conversions are implemented, object conversion functions like `toString ` and `valueOf` are 
+> not invoked yet.
 
 #### Logical operators and parenthesis
 
