@@ -5,7 +5,7 @@ layout: base
 <div class="tagline-full-width">
   <div class="wrapper">
     <div class="tag-line">
-      Durable script execution for stitching microservices and serverless functions
+      Resilient script execution for stitching microservices and serverless functions
     </div>
   </div>
 </div>
@@ -15,9 +15,9 @@ layout: base
     <div class="home">
       <div class="description">
         <div class="index-paragraph">
-          <div class="index-title">Durable script execution</div>
+          <div class="index-title">Resilient script execution</div>
           Transactions don't work over HTTP.  Instead use RockScript to maintain consistency over 
-          a combination of queries, transformations and updates.
+          a combination of queries, transformations, updates and even long running activities.
         </div>
         <div class="index-paragraph">
           <div class="index-title">Code your workflows</div>
@@ -25,8 +25,8 @@ layout: base
         </div>
         <div class="index-paragraph">
           <div class="index-title">Event-driven</div>
-          RockScript supports non-blocking and long-running service functions.  And it targets
-          event-driven microservices and serverless cloud functions.  
+          RockScript targets event-driven microservices and ideal for stitching serverless cloud 
+          functions and any API operation.
         </div>
         <div class="index-paragraph">
           <div class="index-title">Separate business logic from boiler plate</div>
