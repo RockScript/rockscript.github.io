@@ -53,7 +53,7 @@ layout: base
                 <input type="text" name="b_95aa3248b4dd2535b145feac6_d88044ce98" tabindex="-1" value="">
               </div>
               <div class="newsletter-button">
-                <input class="red-button" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
+                <a class="red-button" onclick="document.getElementById('mc-embedded-subscribe-form').submit()" id="mc-embedded-subscribe">Subscribe</a>
               </div>
             </form>
           </div>

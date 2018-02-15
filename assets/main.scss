@@ -67,9 +67,18 @@ div.description .index-paragraph:nth-child(n+2) {
   line-height: 1.3em;
 }
 
-.newsletter-button input {
+.newsletter-button {
   width: 100%;
   height: 67px;
+}
+
+.newsletter-button .red-button {
+  display: inline-block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  text-align: center;
+  line-height: 67px;
 }
 
 .icon-email {
