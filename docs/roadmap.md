@@ -5,12 +5,7 @@ title: Roadmap
 
 This page documents the goals and tasks we plan to do next, without guarantees.  
 
-Updated: 29 Jan 2018 
-
-## Expand script language support for transformations
-
-* -, *, /
-* for loop
+Updated: 15 Feb 2018 
 
 ## Concurrency support
 

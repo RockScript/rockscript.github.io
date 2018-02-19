@@ -5,7 +5,10 @@ layout: base
 <div class="tagline-full-width">
   <div class="wrapper">
     <div class="tag-line">
-      Resilient script execution for stitching microservices and serverless functions
+      Resilient script execution 
+    </div><br/>
+    <div class="tag-line" style="font-size:1.3em">
+      for stitching microservices and serverless functions
     </div>
   </div>
 </div>
