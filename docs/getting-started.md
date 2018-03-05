@@ -98,5 +98,5 @@ To check that you have the server running, you can just check open
 the documentation that is included in the server. Point your browser 
 to [http://localhost:3652/](http://localhost:3652/)
 
-Next, take [tutorial](the 5 minute tutorial) and get your first 
+Next, take [the 5 minute tutorial](tutorial) and get your first 
 script running.
